@@ -1,0 +1,17 @@
+.LinkAnimation {
+    position: relative;
+}
+.LinkAnimation::after {
+    content: ' ';
+    height: 2px;
+    position: absolute;
+    bottom: -3px; /* Align the line at the bottom */
+    left: 0;
+    width: 0; /* Start with 0 width */
+    background: #000;
+    transition: width 0.3s ease; /* Add transition for the animation */
+}
+
+.LinkAnimation:hover::after {
+    width: 100%; /* Expand width on hover */
+}
