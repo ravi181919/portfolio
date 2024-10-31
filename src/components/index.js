@@ -1,2 +1,4 @@
 import Navbar from "./Header/Navbar";
-export { Navbar };
+import Home from "./Home";
+import axios from "../utils/axios";
+export { Navbar, Home, axios };
