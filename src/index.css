@@ -2,16 +2,15 @@
 @tailwind base;
 @tailwind utilities;
 
-
 .scrollbar-hidden::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
-  }
+  display: none; /* Hide scrollbar */
+}
 
-  .scrollbar-hidden {
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
-  }
-  
-  /* Hide scrollbar for Firefox */
-  .scrollbar-hidden {
-    scrollbar-width: none; /* Firefox */
-  } 
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+}

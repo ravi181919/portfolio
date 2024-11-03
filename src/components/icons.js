@@ -18,7 +18,7 @@ import { FaDev } from "react-icons/fa6";
 
 // Array of all icon references (no JSX)
 const iconsArray = [
-    FaDev,
+  FaDev,
   SiGreensock,
   SiFramer,
   FaJs,
