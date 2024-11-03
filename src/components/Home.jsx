@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import iconsArray from "./icons";
+import { motion } from "framer-motion";
 import axios from "../utils/axios";
+
+
 const Home = () => {
   const [githubData, setGithubData] = useState({});
 
@@ -23,20 +26,27 @@ const Home = () => {
           {githubData.bio}
         </h1>
       </div>
-      <div className="w-full flex items-center justify-center gap-8 lg:gap-16 py-3 lg:py-10 lg:my-2 px-2 overflow-x-scroll overflow-y-hidden scrollbar-hidden">
-        {iconsArray.map((Icon, index) => (
-          <div key={index} className="flex-shrink-0">
-            {" "}
-            {/* Prevent shrinking to ensure visibility */}
-            <Icon size={35} />
-          </div>
-        ))}
-        {iconsArray.map((Icon, index) => (
-          <div key={index} className="flex-shrink-0">
-            <Icon size={35} />
-          </div>
-        ))}
-      </div>
+     <div className="w-full flex items-center justify-start gap-8 lg:gap-16 py-3 lg:py-10 lg:my-2 px-2 overflow-x-hidden scrollbar-hidden">
+   <motion.div
+     className="flex gap-8 lg:gap-16"
+     initial={{ x: 0 }}
+     animate={{ x: '-100%' }}
+     transition={{
+       repeat: Infinity,
+       repeatType: "loop",
+       ease: "linear",
+       duration: 20, 
+     }}
+     style={{ display: "flex", minWidth: "200%" }}
+   >
+     {[...iconsArray, ...iconsArray].map((Icon, index) => (
+       <div key={index} className="flex-shrink-0">
+         <Icon size={35} />
+       </div>
+     ))}
+   </motion.div>
+</div>
+
     </div>
   );
 };
