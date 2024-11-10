@@ -2,6 +2,17 @@
 @tailwind base;
 @tailwind utilities;
 
+::-webkit-scrollbar{
+  width: 4px;
+}
+::-webkit-scrollbar-thumb{
+  background: #ff0000;
+  border-radius: 5px;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* Home component  */
 .scrollbar-hidden::-webkit-scrollbar {
   display: none; /* Hide scrollbar */
 }

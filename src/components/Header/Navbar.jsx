@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineLightMode } from "react-icons/md";
 import { FiMoon } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./nav_style.css";
 
 const Navbar = () => {
@@ -70,12 +70,15 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="hidde flex items-center justify-center gap-3 lg:gap-5">
+            <Link to={'https://github.com/ravi181919'} 
+            className="text-md lg:text-xl duration-100 text-black dark:text-white bg-zinc-100 dark:bg-zinc-800 p-[6px] rounded-lg">
             <span
               aria-label="Github profile"
-              className="text-md lg:text-xl duration-100 text-black dark:text-white bg-zinc-100 dark:bg-zinc-800 p-[6px] rounded-lg"
+              className=""
             >
               <FaGithub />
             </span>
+            </Link>
             <span
               aria-label={
                 darkMode ? "Switch to light mode" : "Switch to dark mode"
