@@ -29,12 +29,11 @@ const Home = () => {
       </div>
       <div className="w-full flex items-center justify-start gap-8 lg:gap-16 py-0 lg:my-2 my-0 px-2 overflow-x-hidden scrollbar-hidden">
         <motion.div
-          className="flex gap-8 lg:gap-16"
+          className="flex gap-8 lg:gap-16 bg-blac"
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{
             repeat: Infinity,
-            repeatType: "loop",
             ease: "linear",
             duration: 10,
           }}
