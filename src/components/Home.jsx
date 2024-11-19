@@ -19,17 +19,17 @@ const Home = () => {
     HomePageApiCall();
   }, []);
 
-  document.title = 'Ravi Gupta | Home'
+  document.title = "Ravi Gupta | Home";
   return (
     <div className="w-full  flex lg:py-1 py-1  lg:gap-[65px] lg:items-center  flex-col justify-center lg:px-20  px-7 h-[55vh] lg:h-[90vh]">
       <div className="flex mb-14 lg:mb-0 items-center justify-center w-full h-1/2 lg:mt-14">
-        <h1 className="leading-1  select-none cursor-text font-black dark:text-white/65 backdrop-blur-lg text-black/75 lg:text-[3vw] text-[5.5vw] lg:w-[69%] w-full text-center">
+        <h1 className="leading-1 select-none cursor-text font-black dark:text-white/65 backdrop-blur-lg text-black/75 lg:text-[3vw] text-[5.5vw] lg:w-[69%] w-full text-center">
           {githubData.bio}
         </h1>
       </div>
       <div className="w-full flex items-center justify-start gap-8 lg:gap-16 py-0 lg:my-2 my-0 px-2 overflow-x-hidden scrollbar-hidden">
         <motion.div
-          className="flex gap-8 lg:gap-16 bg-blac"
+          className="flex gap-8 lg:gap-16"
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{

@@ -1,8 +1,13 @@
 import React from "react";
+import {motion} from 'framer-motion'
 const Card = ({ projects }) => {
   return  (
     projects && (
-      <div className="lg:min-w-[30vw] relative flex items-start justify-center min-w-[90%] lg:h-full bg-white/30 backdrop-blur-lg shadow-lg border rounded-lg border-white/20 h-full dark:text-white/65">
+      <motion.div
+      initial={{scale: .5}}
+      whileInView={{scale: 1}}
+      transition={{duration: .7}}
+       className="lg:min-w-[30vw] relative flex items-start justify-center min-w-[90%] lg:h-full bg-white/30 backdrop-blur-lg shadow-lg border rounded-lg border-white/20 h-full dark:text-white/65">
         <div className="max-w-lg w-full h-full rounded py-4 px-3">
           {/* avatar */}
           <div className="flex py-2 px-2 items-center">
@@ -82,7 +87,7 @@ const Card = ({ projects }) => {
             Last updated: {new Date(projects.updated_at).toLocaleDateString()}
           </p>
         </div>
-      </div>
+      </motion.div>
     )
   );
 };
