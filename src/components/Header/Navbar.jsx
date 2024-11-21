@@ -70,17 +70,15 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="hidde flex items-center justify-center gap-3 lg:gap-5">
-            <a 
-            href={'https://github.com/ravi181919'} 
-            target="_blank"
+            <a
+              href={"https://github.com/ravi181919"}
+              target="_blank"
               rel="noopener noreferrer"
-            className="text-md lg:text-xl duration-100 text-black dark:text-white bg-zinc-100 dark:bg-zinc-800 p-[6px] rounded-lg">
-            <span
-              aria-label="Github profile"
-              className=""
+              className="text-md lg:text-xl duration-100 text-black dark:text-white bg-zinc-100 dark:bg-zinc-800 p-[6px] rounded-lg"
             >
-              <FaGithub />
-            </span>
+              <span aria-label="Github profile" className="">
+                <FaGithub />
+              </span>
             </a>
             <span
               aria-label={

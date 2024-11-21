@@ -56,8 +56,22 @@ const Skill = () => {
     <div className="lg:w-full lg:h-screen w-full h-[60vh] lg:px-10 dark:text-white/65 text-black/75">
       <div className="flex flex-col h-full">
         {/* Heading */}
-        <Heading title="My Skills" Icon={SiHyperskill}/>
+        <Heading title="My Skills" Icon={SiHyperskill} />
 
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, scale: 1.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+          <h1 className="text-3xl lg:text-4xl font-black w-full text-center mb-4">
+            Frontend Skills <span className="text-yellow-400">Showcase</span>
+          </h1>
+
+          <p className="text-xs lg:text-sm font-medium w-full text-center">
+            Showcasing my proficiency in modern frontend technologies.
+          </p>
+        </motion.div>
         {/* Skills */}
         <div className="flex items-center justify-evenly w-full mb-2 h-full overflow-x-auto scrollbar-hidden gap-2">
           {mySkills.map((skills, index) => (
@@ -70,7 +84,7 @@ const Skill = () => {
                   initial={{ y: skills.performanceInThis, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   whileHover={{ scale: 1.1, filter: "brightness(1.2)" }}
-                  transition={{ duration: 1, ease: "linear" }}
+                  transition={{ duration: 0.6, ease: "linear" }}
                   style={{
                     height: `${skills.performanceInThis}%`,
                     backgroundColor: `${skills.bgColor}`,
@@ -84,7 +98,7 @@ const Skill = () => {
                 className="text-center text-xs whitespace-nowrap w-16 h-9 font-medium"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, ease: "linear" }}
+                transition={{ duration: 0.6, ease: "linear" }}
               >
                 {skills.nameOfTechnologyOrLanguage}
                 <span
