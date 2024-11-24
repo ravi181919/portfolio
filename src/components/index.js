@@ -6,4 +6,5 @@ import Projects from "./Projects";
 import Card from "./Card";
 import Heading from "./Heading";
 import Contact from "./Contact";
-export { Navbar, Home, axios, Skill, Projects, Card, Heading, Contact };
+import Footer from "./Footer";
+export { Navbar, Home, axios, Skill, Projects, Card, Heading, Contact, Footer  };

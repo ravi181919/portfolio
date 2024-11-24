@@ -7,17 +7,17 @@ const Skill = () => {
   const mySkills = [
     {
       nameOfTechnologyOrLanguage: "HTML",
-      performanceInThis: 93,
+      performanceInThis: 85,
       bgColor: "#364953",
     },
     {
       nameOfTechnologyOrLanguage: "CSS",
-      performanceInThis: 90,
+      performanceInThis: 80,
       bgColor: "#5A5549",
     },
     {
       nameOfTechnologyOrLanguage: "JavaScript",
-      performanceInThis: 85,
+      performanceInThis: 89,
       bgColor: "#37B99C",
     },
     {
@@ -27,7 +27,7 @@ const Skill = () => {
     },
     {
       nameOfTechnologyOrLanguage: "React Js",
-      performanceInThis: 83,
+      performanceInThis: 85,
       bgColor: "#E06153",
     },
     {
