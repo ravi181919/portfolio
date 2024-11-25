@@ -18,12 +18,12 @@ const Contact = () => {
 
   const onSubmit = (data) => {
     alert("Form submitted successfully!");
-    console.log(data);
+    // console.log(data);
     reset();
   };
 
   return (
-    <div className="w-full mt-8 lg:mt-2 lg:min-h-[100vh text-black/75 mb-4 dark:text-white/65 px-5 lg:px-20">
+    <div className="w-full mt-8 lg:mt-2 lg:min-h-[100vh flex items-center justify-center flex-col text-black/75 mb-4 dark:text-white/65 px-5 lg:px-20">
       <Heading Icon={PiMailboxFill} title={"Contact"} />
 
       <motion.div
