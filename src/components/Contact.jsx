@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full mt-8 lg:mt-2 lg:min-h-[100vh flex items-center justify-center flex-col text-black/75 mb-4 dark:text-white/65 px-5 lg:px-20">
+    <div className="w-full mt-8 lg:mt-2 lg:min-h-[100vh] flex items-center justify-center flex-col text-black/75 mb-4 dark:text-white/65 px-5 lg:px-20">
       <Heading Icon={PiMailboxFill} title={"Contact"} />
 
       <motion.div
@@ -40,7 +40,7 @@ const Contact = () => {
         </p>
       </motion.div>
 
-      <div className="grid lg:grid-cols-1 gap-2 mt-10  place-items-center">
+      <div className="grid lg:grid-cols-1 gap-2 mt-10 lg:w-full w-auto  place-items-center">
         {/* Contact Form */}
         <motion.div
           className="rounded-xl lg:p-5 p-4 lg:w-[40%] w-full  shadow-[0_4px_8px_rgba(0,_0,_0,_0.4)]"
