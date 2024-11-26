@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
+ 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -31,7 +32,6 @@ const Footer = () => {
     duration: 0.8,
     ease: "easeInOut",
   };
-
   return (
     <footer className="lg:h-[35vh] h-[20vh] lg:py-5 w-full relative skill-bg dark:text-white text-black">
       <div className="flex items-center justify-center lg:px-28 px-8 h-full">

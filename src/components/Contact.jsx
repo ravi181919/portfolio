@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -9,6 +9,11 @@ import { SiGmail } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
+
+useEffect(() => {
+  document.title = "Ravi Gupta | Contact";
+}, [])
+
   const {
     register,
     handleSubmit,

@@ -66,7 +66,7 @@ const Navbar = () => {
                 <NavLink
                   key={index}
                   to={linksItems.URL}
-                  className="LinkAnimation capitalize dark:after:bg-white font-medium cursor-pointer text-xs lg:text-sm"
+                  className={`LinkAnimation ${linksItems.name === 'LinkedIn' && 'lg:block hidden'} capitalize dark:after:bg-white font-medium cursor-pointer text-xs lg:text-sm`}
                 >
                   {linksItems.name }
                 </NavLink>

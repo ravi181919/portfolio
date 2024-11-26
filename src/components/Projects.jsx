@@ -19,10 +19,10 @@ const Projects = () => {
   };
 
   useEffect(() => {
+    document.title = "Ravi Gupta | Projects";
     gitHubProjectHandler();
   }, []);
 
-  document.title = "Ravi Gupta | Projects";
   return projects.length > 0 ? (
     <div className="w-full flex flex-col justify-center items-center dark:text-white/65 backdrop-blur-lg text-black/75">
       {/* Heading */}
@@ -44,7 +44,7 @@ const Projects = () => {
         </p>
       </motion.div>
       {/* Cards */}
-      <div className="w-full lg:py-1 mb-6 lg:flex-wrap overflow-x-auto scrollbar-hidden lg:w-full dark:text-white/65  text-black/75 h-fit flex items-center lg:justify-center justify-start gap-4 lg:px-5 px-4">
+      <div className="w-full lg:py-1 mb-6 lg:flex-wrap overflow-x-auto scrollbar-hidden lg:w-full dark:text-white/65  text-black/75 h-fit flex items-center lg:items-center lg:justify-center justify-start gap-4 lg:px-5 px-4">
         {projects.length > 0 ? (
           projects.map((repo) => <Card key={repo.id} projects={repo} />)
         ) : (

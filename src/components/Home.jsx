@@ -16,10 +16,9 @@ const Home = () => {
     }
   };
   useEffect(() => {
+    document.title = "Ravi Gupta | Home"
     HomePageApiCall();
   }, []);
-
-  document.title = "Ravi Gupta | Home";
   return (
     <div className="w-full  flex lg:py-1 py-1  lg:gap-[65px] lg:items-center  flex-col justify-center lg:px-20  px-7 h-[55vh] lg:h-[90vh]">
       <div className="flex mb-14 lg:mb-0 items-center justify-center w-full h-1/2 lg:mt-14">

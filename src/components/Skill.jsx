@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SiHyperskill } from "react-icons/si";
 import Heading from "./Heading";
 import { motion } from "framer-motion";
 
 const Skill = () => {
+  useEffect(() => {
+  document.title = "Ravi Gupta | Skills";
+  }, [])
   const mySkills = [
     {
       nameOfTechnologyOrLanguage: "HTML",
