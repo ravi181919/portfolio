@@ -36,7 +36,7 @@ useEffect(() => {
       },
       body: JSON.stringify({
         ...data,
-        access_key: import.meta.env.VITE_ACCESS_KEY_FOR_FORM_SUBMIT,
+        access_key: import.meta.env.VITE_WEB3FORM_API_ID,
         to_email: import.meta.env.VITE_EMAIL_ID,
       }),
     });
