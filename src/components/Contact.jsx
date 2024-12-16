@@ -21,11 +21,36 @@ useEffect(() => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    alert("Form submitted successfully!");
-    // console.log(data);
-    reset();
+  // const onSubmit = (data) => {
+  //   alert("Form submitted successfully!");
+  //   console.log(data);
+  //   reset();
+  // };
+
+  // handle form 
+  const onSubmit = async (data) => {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        ...data,
+        access_key: import.meta.env.VITE_ACCESS_KEY_FOR_FORM_SUBMIT,
+        to_email: import.meta.env.VITE_EMAIL_ID,
+      }),
+    });
+  
+    const result = await response.json();
+    if (response.ok) {
+      alert("Form submitted successfully!");
+      reset();
+    } else {
+      console.error("Form submission failed:", result);
+      alert("Something went wrong. Please try again later.");
+    }
   };
+  
 
   return (
     <div className="w-full mt-8 lg:mt-2 lg:min-h-[100vh] flex items-center justify-center flex-col text-black/75 mb-4 dark:text-white/65 px-5 lg:px-20">
@@ -54,8 +79,10 @@ useEffect(() => {
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <h2 className="text-2xl font-black mb-2">Send a Message</h2>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <form 
+           onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
+              
               <label className="block text-sm font-medium">Name</label>
               <input
                 type="text"

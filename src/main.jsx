@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: (
-      <div className="w-full overflow-hidden  dark:bg-zinc-800 dark:text-white/65  bg-zinc-200">
+      <div className="w-full overflow-hidden  dark:bg-zinc-800 dark:text-white/65  bg-zinc-200 lg:h-auto min-h-screen flex flex-col justify-between ">
         <Navbar />
         <Home />
         <Footer />
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/projects",
     element: (
-      <div className="w-full overflow-hidden  dark:bg-zinc-800 dark:text-white/65  bg-zinc-200">
+      <div className="w-full overflow-hidden  dark:bg-zinc-800 dark:text-white/65  bg-zinc-200 lg:h-auto min-h-screen flex flex-col justify-between ">
         <Navbar />
         <Projects />
         <Footer />
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
   {
     path: "/skills",
     element: (
-      <div className="w-full overflow-hidden  dark:bg-zinc-800 dark:text-white/65  bg-zinc-200">
+      <div className="w-full overflow-hidden  dark:bg-zinc-800 dark:text-white/65  bg-zinc-200 lg:h-auto min-h-screen flex flex-col justify-between ">
         <Navbar />
         <Skill />
         <Footer />
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: (
-      <div className="w-full overflow-hidden  dark:bg-zinc-800 dark:text-white/65  bg-zinc-200">
+      <div className="w-full overflow-hidden  dark:bg-zinc-800 dark:text-white/65  bg-zinc-200 lg:h-auto min-h-screen flex flex-col justify-between ">
         <Navbar />
         <Contact />
         <Footer />

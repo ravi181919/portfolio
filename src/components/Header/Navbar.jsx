@@ -11,23 +11,23 @@ const Navbar = () => {
   const arrayForLinks = [
     {
       URL: "/home",
-      name:'Home'
+      name: "Home",
     },
     {
       URL: "/skills",
-      name:'Skills'
+      name: "Skills",
     },
     {
       URL: "/projects",
-      name:'Projects'
+      name: "Projects",
     },
     {
       URL: "/contact",
-      name:'Contact'
+      name: "Contact",
     },
     {
       URL: "https://www.linkedin.com/in/ravi-gupta-20236b293/",
-      name:'LinkedIn'
+      name: "LinkedIn",
     },
   ];
 
@@ -66,9 +66,11 @@ const Navbar = () => {
                 <NavLink
                   key={index}
                   to={linksItems.URL}
-                  className={`LinkAnimation ${linksItems.name === 'LinkedIn' && 'lg:block hidden'} capitalize dark:after:bg-white font-medium cursor-pointer text-xs lg:text-sm`}
+                  className={`LinkAnimation ${
+                    linksItems.name === "LinkedIn" && "lg:block hidden"
+                  } capitalize dark:after:bg-white font-medium cursor-pointer text-xs lg:text-sm`}
                 >
-                  {linksItems.name }
+                  {linksItems.name}
                 </NavLink>
               ))}
             </ul>

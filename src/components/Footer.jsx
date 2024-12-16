@@ -33,7 +33,7 @@ const Footer = () => {
     ease: "easeInOut",
   };
   return (
-    <footer className="lg:h-[35vh] h-[20vh] lg:py-5 w-full relative skill-bg dark:text-white text-black">
+    <footer className="lg:h-[45vh] h-[30vh] lg:py-5 w-full relative skill-bg dark:text-white text-black">
       <div className="flex items-center justify-center lg:px-28 px-8 h-full">
         {/* Logo Section */}
         <div

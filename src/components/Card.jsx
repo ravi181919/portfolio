@@ -1,13 +1,14 @@
 import React from "react";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 const Card = ({ projects }) => {
-  return  (
+  return (
     projects && (
       <motion.div
-      initial={{scale: .5}}
-      whileInView={{scale: 1}}
-      transition={{duration: .7}}
-       className="lg:min-w-[30vw] relative flex items-start justify-center min-w-[90%] lg:h-full bg-white/30 backdrop-blur-lg shadow-lg border rounded-lg border-white/20 h-full dark:text-white/65">
+        initial={{ scale: 0.8 }}
+        whileInView={{ scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="lg:min-w-[30vw] relative flex items-start justify-center min-w-[90%] lg:h-full bg-white/30 backdrop-blur-lg shadow-lg border rounded-lg border-white/20 h-full dark:text-white/65 "
+      >
         <div className="max-w-lg w-full h-full rounded py-4 px-3">
           {/* avatar */}
           <div className="flex py-2 px-2 items-center">
@@ -29,20 +30,20 @@ const Card = ({ projects }) => {
               <p className="text-xs">by {projects.owner.login}</p>
             </div>
           </div>
-          {
-            projects.description && <p className="text-xs">
-            {projects.description.slice(0, 50)}{" "}
-            <a
-              href={projects.clone_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" text-blue-400 hover:text-yellow-600 text-xs"
-            >
-              more...
-            </a>
-          </p>
-          }
-          
+          {projects.description && (
+            <p className="text-xs">
+              {projects.description.slice(0, 50)}{" "}
+              <a
+                href={projects.clone_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className=" text-blue-400 hover:text-yellow-600 text-xs"
+              >
+                more...
+              </a>
+            </p>
+          )}
+
           <div className="w-full flex whitespace-nowrap overflow-x-scroll scrollbar-hidden mt-1 gap-2">
             {projects.topics.map((topic) => (
               <span

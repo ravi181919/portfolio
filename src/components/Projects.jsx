@@ -4,6 +4,7 @@ import { GoProjectRoadmap } from "react-icons/go";
 import Card from "./Card";
 import Heading from "./Heading";
 import { motion } from "framer-motion";
+import Loading from "./Loader/Loading";
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   // GitHub Repo
@@ -48,12 +49,12 @@ const Projects = () => {
         {projects.length > 0 ? (
           projects.map((repo) => <Card key={repo.id} projects={repo} />)
         ) : (
-          <h1>Sorry, Data is not Available</h1>
+          <Loading />
         )}
       </div>
     </div>
   ) : (
-    <h1>Sorry, Data is not Available</h1>
+    <Loading />
   );
 };
 
