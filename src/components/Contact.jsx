@@ -80,9 +80,11 @@ useEffect(() => {
         >
           <h2 className="text-2xl font-black mb-2">Send a Message</h2>
           <form 
+          action="https://api.web3forms.com/submit"
+          method="POST"
            onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
-              
+            <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORM_API_ID} />
               <label className="block text-sm font-medium">Name</label>
               <input
                 type="text"
